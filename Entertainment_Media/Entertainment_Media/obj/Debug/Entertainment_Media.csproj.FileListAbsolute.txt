@@ -1,0 +1,8 @@
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\bin\Debug\Entertainment_Media.exe.config
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\bin\Debug\Entertainment_Media.exe
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\bin\Debug\Entertainment_Media.pdb
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\obj\Debug\Entertainment_Media.csproj.AssemblyReference.cache
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\obj\Debug\Entertainment_Media.csproj.SuggestedBindingRedirects.cache
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\obj\Debug\Entertainment_Media.csproj.CoreCompileInputs.cache
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\obj\Debug\Entertainment_Media.exe
+E:\D Drive\Study\Third Semester\OOP_Lab\Refactoring_Project\Entertainment_Media\Entertainment_Media\obj\Debug\Entertainment_Media.pdb
