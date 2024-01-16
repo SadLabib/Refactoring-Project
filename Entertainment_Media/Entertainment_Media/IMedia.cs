@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public class Books
+    internal interface IMedia
     {
     }
 }

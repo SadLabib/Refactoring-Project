@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    internal class Series
+    public class Series
     {
     }
 }
