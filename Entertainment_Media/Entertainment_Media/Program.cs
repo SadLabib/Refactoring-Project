@@ -10,15 +10,12 @@ namespace Entertainment_Media
     {
         static void Main(string[] args)
         {
-            User user = new User("Sadman Labib", new NormalSubscription());
-
+            MediaList mediaList = new MediaList();
+            MediaManager mediaManager = new MediaManager();
+            Movie movie ;
             
-            
-            Console.WriteLine("1. Browse Media");
-            Console.WriteLine("2. Subscribe to Normal Plan");
-            Console.WriteLine("3. Subscribe to Premium Plan");
-            Console.WriteLine("4. Exit");
-
+            Dashboard dash = new Dashboard(mediaList, mediaManager, movie);
+            dash.EnterDashboard();
             Console.ReadKey();
 
         }

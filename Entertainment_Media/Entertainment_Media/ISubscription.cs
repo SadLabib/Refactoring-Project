@@ -8,6 +8,6 @@ namespace Entertainment_Media
 {
     public interface ISubscription
     {
-        void Subscribe(User user);
+        void Subscribe();
     }
 }

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public class Subscription
+    public interface IWatch
     {
-        public Subscription() { }   
+        void Play ();
+        void Pause ();
+        void Stop ();
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    internal interface IMedia
+    public interface IMedia
     {
+        void GetDetails();
     }
 }

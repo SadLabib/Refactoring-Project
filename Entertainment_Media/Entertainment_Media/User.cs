@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public class User : IUser
+    public abstract class User
     {
         public string Username { get; set; }
-        public ISubscription SubscriptionType { get; set; }
+        public string Email { get; set; }
 
-        public User(string username, ISubscription subscriptionType)
-        {
-            Username = username;
-            SubscriptionType = subscriptionType;
-        }
+        public string Pass { get; set; }
+        public string SubscriptionType { get; set; }
+
+  
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public class Books
+    public class SubscriptionService
     {
+        public void subscribe(ISubscription user)
+        {
+            user.Subscribe();
+        }
     }
 }
