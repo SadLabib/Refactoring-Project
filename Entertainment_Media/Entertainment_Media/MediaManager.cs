@@ -31,5 +31,23 @@ namespace Entertainment_Media
                 i++;
             }
         }
+
+        public void GetDetails(IMedia med)
+        {
+            med.GetDetails();
+        }
+
+        public void Play(IWatch watch)
+        {
+            watch.Play();
+        }
+        public void Pause(IWatch watch)
+        {
+            watch.Pause();
+        }
+        public void Stop(IWatch watch)
+        {
+            watch.Stop();
+        }
     }
 }

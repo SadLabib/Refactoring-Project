@@ -12,13 +12,13 @@ namespace Entertainment_Media
         MediaList MediaList { get; set; }
         MediaManager MediaManager { get; set; }
 
-        IWatch watch { get; set; }
+        Movie Movie;
+        Series Series;
 
-        public Dashboard(MediaList mediaList, MediaManager mediaManager, IWatch watch)
+        public Dashboard(MediaList mediaList, MediaManager mediaManager)
         {
             MediaList = mediaList;
             MediaManager = mediaManager;
-            this.watch = watch;
         }
 
         public void EnterDashboard()
@@ -46,6 +46,11 @@ namespace Entertainment_Media
 
                 case "3":
                     Console.WriteLine("About");
+                    break;
+
+                case "4":
+                    Environment.Exit(0);
+
                     break;
 
                 default:
@@ -82,7 +87,7 @@ namespace Entertainment_Media
             switch (UserChoice)
             {
                 case "1":
-                    BrowseMedia();
+                    BrowseMedia(nu);
                     break;
 
                 case "2":
@@ -90,7 +95,10 @@ namespace Entertainment_Media
                     break;
 
                 case "3":
-                    Console.WriteLine("About");
+                    EnterDashboard();
+                    break;
+                case "4":
+                    Environment.Exit(0);
                     break;
 
                 default:
@@ -129,7 +137,7 @@ namespace Entertainment_Media
             switch (UserChoice1)
             {
                 case "1":
-                    BrowseMedia();
+                    BrowseMedia(pu);
                     break;
 
                 case "2":
@@ -137,7 +145,10 @@ namespace Entertainment_Media
                     break;
 
                 case "3":
-                    Console.WriteLine("About");
+                    EnterDashboard();
+                    break;
+                case "4": 
+                    Environment.Exit(0);
                     break;
 
                 default:
@@ -147,7 +158,7 @@ namespace Entertainment_Media
         }
 
 
-        public void BrowseMedia()
+        public void BrowseMedia(User user)
         {
             Console.WriteLine("1. Movies");
             Console.WriteLine("2. Series");
@@ -173,9 +184,14 @@ namespace Entertainment_Media
 
                 case "3":
                     Console.WriteLine("Not Added Yet!");
+                    BrowseMedia(user);
                     break;
                 case "4":
-                    Console.WriteLine("Not Added Yet!");
+                    Console.Clear();
+                    EnterDashboard();
+                    break;
+                case "5":
+                    Environment.Exit(0);
                     break;
 
                 default:
@@ -188,15 +204,29 @@ namespace Entertainment_Media
             Console.Write("Enter your choice: ");
             string UserChoice2 = Console.ReadLine();
 
+            int Choice = int.Parse(UserChoice2);
+
             if(UserChoice2 != "0" || UserChoice2 != "x")
             {
                 Console.Clear();
-                mainInterface();
+                
+                if(UserChoice1 == "1")
+                {
+                    Movie = MediaList.movielist[Choice-1];
+                    mainInterface(user, Movie);
+                }
+                if(UserChoice1 == "2")
+                {
+                    Series = MediaList.seriesList[Choice-1];
+                    mainInterface(user, Series);
+                }
+
+
             }
 
         }
 
-        public void mainInterface()
+        public void mainInterface(User user, IMedia media)
         {
             Console.WriteLine("1. Watch");
             Console.WriteLine("2. Download");
@@ -204,6 +234,110 @@ namespace Entertainment_Media
             Console.WriteLine("4. Details");
             Console.WriteLine("5. Back");
             Console.WriteLine("6. Exit");
+
+            Console.Write("Enter your choice: ");
+            string UserChoice1 = Console.ReadLine();
+
+
+            Console.Clear();
+
+            switch (UserChoice1)
+            {
+                case "1":
+                    WatchInterface(user);
+                    break;
+
+                case "2":
+                    DownloadInterface(user);
+                    break;
+
+                case "3":
+                    Console.WriteLine("Not added yet!");
+                    mainInterface(user, media);
+
+                    break;
+                case "4":
+                    MediaManager.GetDetails(media);
+                    Console.ReadKey();
+                    Console.Clear();
+                    BrowseMedia(user);
+                    break;
+                case "5":
+                    BrowseMedia(user);
+                    break;
+                case "6":
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+
+
+            }
+        }
+
+        public void WatchInterface(User user)
+        {
+            Console.WriteLine("1. Play");
+            Console.WriteLine("2. Pause");
+            Console.WriteLine("3. Stop");
+            Console.WriteLine("4. Return");
+            Console.WriteLine("5. Exit");
+
+            Console.Write("Enter your choice: ");
+            string UserChoice1 = Console.ReadLine();
+
+
+            Console.Clear();
+
+            switch (UserChoice1)
+            {
+                case "1":
+                    Console.WriteLine("Media Started.");
+                    Console.Clear();
+                    WatchInterface(user);
+                    break;
+
+                case "2":
+                    Console.WriteLine("Media Paused.");
+                    Console.Clear();
+                    WatchInterface(user);
+                    break;
+
+                case "3":
+                    Console.WriteLine("Media Stopped.");
+                    Console.Clear();
+                    WatchInterface(user);
+                    break;
+                case "4":
+                    BrowseMedia(user);
+                    break;
+                case "5":
+                    Environment.Exit(0);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice. Please try again.");
+                    break;
+
+
+            }
+        }
+
+        public void DownloadInterface(User user)
+        {
+            Console.Clear();
+            if (user is PremiumUser)
+            {
+                Console.WriteLine("Download Started.");
+            }
+            else
+            {
+                Console.WriteLine("Normal users can't download!");
+            }
+            Console.ReadKey();
+            BrowseMedia(user);
         }
     }
 }

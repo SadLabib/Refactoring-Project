@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public class NormalUser:User, ISubscription
+    public class NormalUser:User, ISubscription,IReview
     {
         public NormalUser(string Username,string Email, string Pass)
         {
@@ -19,8 +19,13 @@ namespace Entertainment_Media
 
         public void Subscribe()
         {
-            Console.WriteLine("Congratulations you have subscribed to normal subscription");
+            Console.WriteLine("Congratulations you have subscribed to Normal Subscription");
 
+        }
+
+        public void GiveReview()
+        {
+            Console.WriteLine(Username + "gave a review.");
         }
     }
 }

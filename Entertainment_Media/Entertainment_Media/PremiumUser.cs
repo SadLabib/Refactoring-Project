@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public class PremiumUser:User,ISubscription
+    public class PremiumUser:User,ISubscription, IDownload,IReview
     {
         public PremiumUser(string Username, string Email, string Pass)
         {
@@ -17,7 +17,17 @@ namespace Entertainment_Media
         }
         public void Subscribe()
         {
-            Console.WriteLine("Congratulations you have subscribed to Premium subscription!");
+            Console.WriteLine("Congratulations you have subscribed to Premium Subscription!");
         }
+        public void Download()
+        {
+            Console.WriteLine("Download Done.");
+        }
+
+        public void GiveReview()
+        {
+            Console.WriteLine(Username + "gave a review.");
+        }
+
     }
 }

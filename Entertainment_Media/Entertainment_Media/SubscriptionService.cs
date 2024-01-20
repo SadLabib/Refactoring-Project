@@ -8,9 +8,12 @@ namespace Entertainment_Media
 {
     public class SubscriptionService
     {
+        List<User> _users = new List<User>();
         public void subscribe(ISubscription user)
         {
             user.Subscribe();
         }
+        
+       
     }
 }

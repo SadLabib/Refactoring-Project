@@ -1,70 +1,112 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Entertainment_Media.Media" Collapsed="true">
-    <Position X="7.25" Y="2.25" Width="1.5" />
+    <Position X="8" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEEAABAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Media.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entertainment_Media.Movie" Collapsed="true">
-    <Position X="9.75" Y="3.5" Width="1.5" />
+    <Position X="10.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAgABAAAAAAAAAAAAAAAAAAAAAAAAEAoAAAAAAAAAA=</HashCode>
       <FileName>Movie.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Entertainment_Media.Series" Collapsed="true">
-    <Position X="5.25" Y="3.5" Width="1.5" />
+    <Position X="5.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAAAABAAAAAAAAAAAAAAAAAAAACAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>QAAgABAAAAAAAAAAAAAAAAAAAACAAAEAoAAAAAAAAAA=</HashCode>
       <FileName>Series.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Entertainment_Media.NormalUser" Collapsed="true">
-    <Position X="12.5" Y="3.5" Width="1.5" />
+    <Position X="13.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>NormalUser.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Entertainment_Media.User" Collapsed="true">
-    <Position X="14.5" Y="2.25" Width="1.5" />
+    <Position X="15.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACQAAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entertainment_Media.PremiumUser" Collapsed="true">
-    <Position X="16.25" Y="3.5" Width="1.5" />
+    <Position X="18.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAACAAAAAAEAAAAAAAA=</HashCode>
       <FileName>PremiumUser.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Entertainment_Media.SubscriptionService" Collapsed="true">
-    <Position X="11.25" Y="0.75" Width="1.5" />
+    <Position X="15.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>SubscriptionService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Entertainment_Media.Dashboard" Collapsed="true">
-    <Position X="11.5" Y="5" Width="1.5" />
+    <Position X="12.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAIAAAAAACAAAAAAAAAQAEAIAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>BAAAAIAAAABAGAAAAAAAAAQAEAIAAAAAAAAAAAAAIAM=</HashCode>
       <FileName>Dashboard.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Entertainment_Media.MediaManager" Collapsed="true">
+    <Position X="8.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAEAAAAAAAAAAAAAAAAAAAAEAoAAAAAAAAAA=</HashCode>
+      <FileName>MediaManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entertainment_Media.MediaList" Collapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAgAAAA=</HashCode>
+      <FileName>MediaList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Entertainment_Media.ISubscription" Collapsed="true">
-    <Position X="14.5" Y="1" Width="1.5" />
+    <Position X="13.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ISubscription.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Entertainment_Media.IMedia" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>IMedia.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Entertainment_Media.IReview" Collapsed="true">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IReview.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Entertainment_Media.IWatch" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>IWatch.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Entertainment_Media.IDownload" Collapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>IDownload.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

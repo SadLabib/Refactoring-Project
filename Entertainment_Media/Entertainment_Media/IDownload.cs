@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entertainment_Media
 {
-    public interface IReview
+    public interface IDownload
     {
-        void GiveReview();
-
+        void Download();
     }
 }

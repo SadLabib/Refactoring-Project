@@ -28,6 +28,7 @@ namespace Entertainment_Media
             Console.WriteLine($"Total Seasons: {this.TotalSeason}");
             Console.WriteLine($"Total Episodes: {this.TotalEpisode}");
         }
+
         public void Play()
         {
             Console.WriteLine("Movie Played.");

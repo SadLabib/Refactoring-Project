@@ -12,7 +12,6 @@ namespace Entertainment_Media
         public string Title { get; set; }
         public string Type{ get; set; }
         public int Year { get; set; }
-        public List<Review> Reviews { get; set; } = new List<Review>();
 
         public Media(string type,string title,int year)
         {
@@ -22,10 +21,7 @@ namespace Entertainment_Media
             Year = year;
         }
 
-        public void AddReview(Review review)
-        {
-            Reviews.Add(review);
-        }
+
 
     }
 }

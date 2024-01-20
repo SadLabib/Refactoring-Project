@@ -12,9 +12,8 @@ namespace Entertainment_Media
         {
             MediaList mediaList = new MediaList();
             MediaManager mediaManager = new MediaManager();
-            Movie movie ;
             
-            Dashboard dash = new Dashboard(mediaList, mediaManager, movie);
+            Dashboard dash = new Dashboard(mediaList, mediaManager);
             dash.EnterDashboard();
             Console.ReadKey();
 
